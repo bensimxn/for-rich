@@ -49,9 +49,9 @@ function ValentineSection() {
 
       <ValentineSlide
         image={`${import.meta.env.BASE_URL}images/valentine-3.png`}
-        caption="Slide 3 caption"
-        story="Slide 3 story"
-        ending="Slide 3 ending"
+        caption="you say you're okay with staying in... but we both know you love going out 😂"
+        story="Sathyam paranja, I'm still kinda shy when it comes to taking you out... and u know damn well that I'm prolly stressing on where to go or what to do and stuff cus this is Kochi and evde poyalum there's always someone ik 😭. But I also know how happy it makes you, even tho u keep saying 'it's okay, we don't have to go anywhere...' as if I don't know you're lying 😭😂. And I think that's what I love about us... this little kind of agape we have, where sometimes it's just about doing the things that make the other person happy, even if it takes a little effort or stepping out of our comfort zone."
+        ending="maybe a little shy, but always happy when it's with you. 🤍"
       />
 
     </>
