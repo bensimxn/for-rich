@@ -65,7 +65,7 @@ function App() {
 
   const handleEnter = () => {
 
-    const audio = new Audio('/music/background.mp3')
+    const audio = new Audio(`${import.meta.env.BASE_URL}music/background.mp3`)
 
     audio.play()
 
