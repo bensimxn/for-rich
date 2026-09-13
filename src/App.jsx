@@ -18,6 +18,7 @@ function App() {
   const [transitioning, setTransitioning] = useState(false)
 
   const lenisRef = useRef(null)
+  const audioRef = useRef(null)
 
 
   // =========================
@@ -65,9 +66,10 @@ function App() {
 
   const handleEnter = () => {
 
-    const audio = new Audio(`${import.meta.env.BASE_URL}music/background.mp3`)
-
-    audio.play()
+    // Start background music
+    if (audioRef.current) {
+      audioRef.current.play()
+    }
 
     setTransitioning(true)
 
@@ -88,6 +90,13 @@ function App() {
 
   return (
     <>
+      {/* Background music */}
+      <audio
+        ref={audioRef}
+        src={`${import.meta.env.BASE_URL}music/background.mp3`}
+        loop
+      />
+
       {!entered && (
         <OpeningScreen
           handleEnter={handleEnter}
