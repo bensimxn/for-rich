@@ -1,0 +1,365 @@
+/* =========================
+   GLOBAL
+   ========================= */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #08080b;
+  color: white;
+  font-family: Georgia, serif;
+}
+
+
+/* =========================
+   LENIS SMOOTH SCROLL
+   ========================= */
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+
+/* =========================
+   ORIGINAL OPENING SCREEN
+   ========================= */
+
+.opening {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.opening h1 {
+  font-size: 55px;
+  font-weight: normal;
+
+  margin: 0 0 50px 0;
+
+  text-shadow:
+    0 0 15px rgba(255, 255, 255, 0.35);
+
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.opening p {
+  font-size: 14px;
+  font-style: italic;
+
+  letter-spacing: 1.5px;
+  line-height: 1.7;
+
+  color: #b8b8bd;
+
+  text-shadow:
+    0 0 15px rgba(255, 255, 255, 0.35);
+
+  margin: 0;
+
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 1s;
+}
+
+.enter {
+  margin-top: 100px;
+
+  font-size: 10px;
+  letter-spacing: 3px;
+
+  color: #77777d;
+
+  text-shadow:
+    0 0 15px rgba(255, 255, 255, 0.35);
+
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 2s;
+
+  cursor: pointer;
+}
+
+.arrow {
+  margin-top: 10px;
+
+  animation:
+    arrowMove 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowMove {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================
+   OPENING SCREEN FADE OUT
+   ========================= */
+
+.opening.fade-out {
+  animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+
+/* =========================
+   ACT ONE
+   ========================= */
+
+.act-one {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+
+/* =========================
+   ROMANTIC SCREEN
+   ========================= */
+
+.romantic-screen {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background-color: #08080b;
+
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+
+/* ROMANTIC TITLE */
+
+.romantic-screen h1 {
+  font-family: "Parisienne", cursive;
+
+  font-size: 90px;
+  font-weight: 400;
+
+  margin: 0 0 55px 0;
+
+  color: #f3e8ed;
+
+  text-shadow:
+    0 0 10px rgba(255, 120, 180, 0.4),
+    0 0 30px rgba(255, 100, 170, 0.25),
+    0 0 60px rgba(255, 80, 160, 0.15);
+
+  animation: romanticGlow 2.5s ease-in-out infinite;
+}
+
+
+@keyframes romanticGlow {
+  0% {
+    text-shadow:
+      0 0 10px rgba(255, 120, 180, 0.4),
+      0 0 30px rgba(255, 100, 170, 0.25),
+      0 0 60px rgba(255, 80, 160, 0.15);
+  }
+
+  50% {
+    text-shadow:
+      0 0 15px rgba(255, 120, 180, 0.7),
+      0 0 40px rgba(255, 100, 170, 0.5),
+      0 0 80px rgba(255, 80, 160, 0.3);
+  }
+
+  100% {
+    text-shadow:
+      0 0 10px rgba(255, 120, 180, 0.4),
+      0 0 30px rgba(255, 100, 170, 0.25),
+      0 0 60px rgba(255, 80, 160, 0.15);
+  }
+}
+
+
+/* ROMANTIC PARAGRAPH */
+
+.romantic-screen p {
+  max-width: 600px;
+
+  font-family: "La Belle Aurore", cursive;
+
+  font-size: 19px;
+  font-style: italic;
+  font-weight: 400;
+
+  line-height: 1.8;
+  letter-spacing: 0.8px;
+
+  color: #c9aeb9;
+
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1s;
+}
+
+
+/* SCROLL */
+
+.scroll {
+  margin-top: 90px;
+
+  font-size: 10px;
+  letter-spacing: 3px;
+
+  color: #a8788d;
+
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 2s;
+}
+
+
+/* SCROLL ARROW */
+
+.scroll .arrow {
+  margin-top: 10px;
+
+  opacity: 1;
+
+  animation:
+    arrowMove 1.5s ease-in-out infinite;
+}
+
+
+/* =========================
+   VALENTINE SLIDES
+   ========================= */
+
+.valentine-slide {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 80px;
+
+  padding: 80px;
+  box-sizing: border-box;
+}
+
+
+/* PHOTO */
+
+.valentine-image {
+  width: 42%;
+  max-width: 500px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.45);
+
+  transform: rotate(-2deg);
+}
+
+.valentine-image img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+}
+
+
+/* STORY */
+
+.valentine-story {
+  width: 38%;
+  max-width: 500px;
+}
+
+.valentine-caption {
+  font-family: "Parisienne", cursive;
+
+  font-size: 24px;
+  line-height: 1.5;
+
+  color: #c9aeb9;
+}
+
+.valentine-text {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 19px;
+  line-height: 1.8;
+
+  color: #c9aeb9;
+}
+
+.valentine-ending {
+  margin-top: 30px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+
+  color: #a8788d;
+}
